@@ -45,7 +45,9 @@ quit
 
 ### Plugin JasperReports
 Siga os passos abaixo para configurar o JasperReports para exportar a lista de contatos em PDF.
+
 1. Edite o arquivo "/pom.xml" e acrescente:
+
 ```maven
 <dependency>
 	<groupId>org.springframework</groupId>
@@ -60,6 +62,7 @@ Siga os passos abaixo para configurar o JasperReports para exportar a lista de c
 ```
 
 2. Edite o arquivo "/src/main/webapp/WEB-INF/spring/webmvc-config.xml" e acrescente:
+
 ```xml
 <beans>
 	...
@@ -71,6 +74,7 @@ Siga os passos abaixo para configurar o JasperReports para exportar a lista de c
 ```
 
 3. Crie o arquivo "/src/main/webapp/WEB-INF/classes/views.properties"
+
 ```properties
 contatoReportList.(class)=org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView
 contatoReportList.url=/WEB-INF/reports/contatoReportList.jasper
@@ -80,6 +84,7 @@ contatoReportList.reportDataKey=contatoReportList
 4. Crie o design com o JasperReports no seguinte diretório "/src/main/webapp/WEB-INF/reports/"
 
 5. Edite o "ContatoController.java" e acrescente o seguinte método:
+
 ```java
 @RequestMapping(value = "/report/pdf", method = RequestMethod.GET)
 public String fireReport(ModelMap modelMap) {
@@ -90,6 +95,7 @@ public String fireReport(ModelMap modelMap) {
 ```
 
 6. Edite o arquivo "/src/main/webapp/WEB-INF/i18n/application.properties" e acrescente:
+
 ```properties
 menu_item_contato_export_label=Export PDF
 ```
@@ -97,6 +103,7 @@ menu_item_contato_export_label=Export PDF
 7. Para as demais properties adicione a chave "global_menu_export_pdf" com sua respectiva tradução.
 
 8. Edite o arquivo "/src/main/webapp/WEB-INF/views/menu.jspx" e acrescente:
+
 ```jspx
 <menu:item id="i_contato_export" messageCode="global_menu_export_pdf" url="/contatoes/report/pdf" />
 ```
