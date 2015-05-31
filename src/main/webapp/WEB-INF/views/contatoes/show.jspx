@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_br_com_ufscar_dsw_agenda_domain_Contato" object="${contato}" path="/contatoes" z="wsqnir7UfoqLaWgQbmMQmM2bNk4=">
+        <field:display field="nome" id="s_br_com_ufscar_dsw_agenda_domain_Contato_nome" object="${contato}" z="3mrgxzBbH8sKju9mdjtr1DBHge4="/>
+        <field:display field="email" id="s_br_com_ufscar_dsw_agenda_domain_Contato_email" object="${contato}" z="64Z23ntMRNdjL5OUBs25I2dpXNM="/>
+        <field:display date="true" dateTimePattern="${contato_datanascimento_date_format}" field="dataNascimento" id="s_br_com_ufscar_dsw_agenda_domain_Contato_dataNascimento" object="${contato}" z="yctWaH3GfWykBPprFAzkdsakyro="/>
+        <field:display field="telefone" id="s_br_com_ufscar_dsw_agenda_domain_Contato_telefone" object="${contato}" z="/D8BKskuZN+To8/18Q3bqg6+N/0="/>
+    </page:show>
+</div>

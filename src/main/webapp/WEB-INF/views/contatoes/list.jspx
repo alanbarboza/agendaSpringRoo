@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_br_com_ufscar_dsw_agenda_domain_Contato" items="${contatoes}" z="V3XvYiSItC+WGn6pH8WQ3yyqk5g=">
+        <table:table data="${contatoes}" id="l_br_com_ufscar_dsw_agenda_domain_Contato" path="/contatoes" z="IF+vuSmJPePCohsVXUZnZbjnkP0=">
+            <table:column id="c_br_com_ufscar_dsw_agenda_domain_Contato_nome" property="nome" z="vGN60MpEQ8phz5o4KFx4zVy2ues="/>
+            <table:column id="c_br_com_ufscar_dsw_agenda_domain_Contato_email" property="email" z="JKOYRp5PwANZjGEAkZ8dhegX130="/>
+            <table:column date="true" dateTimePattern="${contato_datanascimento_date_format}" id="c_br_com_ufscar_dsw_agenda_domain_Contato_dataNascimento" property="dataNascimento" z="1p6wmZjaav0vrZXRwGhJJxMqCzQ="/>
+            <table:column id="c_br_com_ufscar_dsw_agenda_domain_Contato_telefone" property="telefone" z="6TrP0+rrA4Gt1a5NabfEQjEcpIg="/>
+        </table:table>
+    </page:list>
+</div>
