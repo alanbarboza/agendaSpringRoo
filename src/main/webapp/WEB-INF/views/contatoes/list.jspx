@@ -7,7 +7,9 @@
             <table:column id="c_br_com_ufscar_dsw_agenda_domain_Contato_nome" property="nome" z="vGN60MpEQ8phz5o4KFx4zVy2ues="/>
             <table:column id="c_br_com_ufscar_dsw_agenda_domain_Contato_email" property="email" z="JKOYRp5PwANZjGEAkZ8dhegX130="/>
             <table:column date="true" dateTimePattern="${contato_datanascimento_date_format}" id="c_br_com_ufscar_dsw_agenda_domain_Contato_dataNascimento" property="dataNascimento" z="1p6wmZjaav0vrZXRwGhJJxMqCzQ="/>
+            <table:column id="c_br_com_ufscar_dsw_agenda_domain_Contato_sexo" property="sexo" z="EriBA8t0pB5ui6Qh0loqEoZK5Xw="/>
             <table:column id="c_br_com_ufscar_dsw_agenda_domain_Contato_telefone" property="telefone" z="6TrP0+rrA4Gt1a5NabfEQjEcpIg="/>
+            <table:column id="c_br_com_ufscar_dsw_agenda_domain_Contato_celular" property="celular" z="3rpyqcuNJyoC4lEpVCW2ajfVbJg="/>
         </table:table>
     </page:list>
 </div>

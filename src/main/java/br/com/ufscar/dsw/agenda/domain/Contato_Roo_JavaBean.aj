@@ -4,7 +4,7 @@
 package br.com.ufscar.dsw.agenda.domain;
 
 import br.com.ufscar.dsw.agenda.domain.Contato;
-import br.com.ufscar.dsw.agenda.domain.Telefone;
+import br.com.ufscar.dsw.agenda.reference.Sexo;
 import java.util.Date;
 
 privileged aspect Contato_Roo_JavaBean {
@@ -33,12 +33,28 @@ privileged aspect Contato_Roo_JavaBean {
         this.dataNascimento = dataNascimento;
     }
     
-    public Telefone Contato.getTelefone() {
+    public Sexo Contato.getSexo() {
+        return this.sexo;
+    }
+    
+    public void Contato.setSexo(Sexo sexo) {
+        this.sexo = sexo;
+    }
+    
+    public String Contato.getTelefone() {
         return this.telefone;
     }
     
-    public void Contato.setTelefone(Telefone telefone) {
+    public void Contato.setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+    
+    public String Contato.getCelular() {
+        return this.celular;
+    }
+    
+    public void Contato.setCelular(String celular) {
+        this.celular = celular;
     }
     
 }

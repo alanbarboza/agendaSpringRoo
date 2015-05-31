@@ -6,6 +6,8 @@
         <field:display field="nome" id="s_br_com_ufscar_dsw_agenda_domain_Contato_nome" object="${contato}" z="3mrgxzBbH8sKju9mdjtr1DBHge4="/>
         <field:display field="email" id="s_br_com_ufscar_dsw_agenda_domain_Contato_email" object="${contato}" z="64Z23ntMRNdjL5OUBs25I2dpXNM="/>
         <field:display date="true" dateTimePattern="${contato_datanascimento_date_format}" field="dataNascimento" id="s_br_com_ufscar_dsw_agenda_domain_Contato_dataNascimento" object="${contato}" z="yctWaH3GfWykBPprFAzkdsakyro="/>
+        <field:display field="sexo" id="s_br_com_ufscar_dsw_agenda_domain_Contato_sexo" object="${contato}" z="t+1aL/B7RaRI/oygq+4+eZtSBpI="/>
         <field:display field="telefone" id="s_br_com_ufscar_dsw_agenda_domain_Contato_telefone" object="${contato}" z="/D8BKskuZN+To8/18Q3bqg6+N/0="/>
+        <field:display field="celular" id="s_br_com_ufscar_dsw_agenda_domain_Contato_celular" object="${contato}" z="6tC4OALaPQ9o0qHoJWjNfDuC0qY="/>
     </page:show>
 </div>

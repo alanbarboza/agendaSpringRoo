@@ -4,9 +4,10 @@
 package br.com.ufscar.dsw.agenda.web;
 
 import br.com.ufscar.dsw.agenda.domain.Contato;
-import br.com.ufscar.dsw.agenda.domain.Telefone;
+import br.com.ufscar.dsw.agenda.reference.Sexo;
 import br.com.ufscar.dsw.agenda.web.ContatoController;
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
@@ -96,7 +97,7 @@ privileged aspect ContatoController_Roo_Controller {
     void ContatoController.populateEditForm(Model uiModel, Contato contato) {
         uiModel.addAttribute("contato", contato);
         addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("telefones", Telefone.findAllTelefones());
+        uiModel.addAttribute("sexoes", Arrays.asList(Sexo.values()));
     }
     
     String ContatoController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

@@ -4,7 +4,6 @@
 package br.com.ufscar.dsw.agenda.web;
 
 import br.com.ufscar.dsw.agenda.domain.Contato;
-import br.com.ufscar.dsw.agenda.domain.Telefone;
 import br.com.ufscar.dsw.agenda.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.core.convert.converter.Converter;
@@ -17,7 +16,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Contato, String> ApplicationConversionServiceFactoryBean.getContatoToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<br.com.ufscar.dsw.agenda.domain.Contato, java.lang.String>() {
             public String convert(Contato contato) {
-                return new StringBuilder().append(contato.getNome()).append(' ').append(contato.getEmail()).append(' ').append(contato.getDataNascimento()).toString();
+                return new StringBuilder().append(contato.getNome()).append(' ').append(contato.getEmail()).append(' ').append(contato.getDataNascimento()).append(' ').append(contato.getTelefone()).toString();
             }
         };
     }
@@ -38,37 +37,10 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
-    public Converter<Telefone, String> ApplicationConversionServiceFactoryBean.getTelefoneToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<br.com.ufscar.dsw.agenda.domain.Telefone, java.lang.String>() {
-            public String convert(Telefone telefone) {
-                return new StringBuilder().append(telefone.getDdd()).append(' ').append(telefone.getNumero()).toString();
-            }
-        };
-    }
-    
-    public Converter<Long, Telefone> ApplicationConversionServiceFactoryBean.getIdToTelefoneConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.Long, br.com.ufscar.dsw.agenda.domain.Telefone>() {
-            public br.com.ufscar.dsw.agenda.domain.Telefone convert(java.lang.Long id) {
-                return Telefone.findTelefone(id);
-            }
-        };
-    }
-    
-    public Converter<String, Telefone> ApplicationConversionServiceFactoryBean.getStringToTelefoneConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.String, br.com.ufscar.dsw.agenda.domain.Telefone>() {
-            public br.com.ufscar.dsw.agenda.domain.Telefone convert(String id) {
-                return getObject().convert(getObject().convert(id, Long.class), Telefone.class);
-            }
-        };
-    }
-    
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
         registry.addConverter(getContatoToStringConverter());
         registry.addConverter(getIdToContatoConverter());
         registry.addConverter(getStringToContatoConverter());
-        registry.addConverter(getTelefoneToStringConverter());
-        registry.addConverter(getIdToTelefoneConverter());
-        registry.addConverter(getStringToTelefoneConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {

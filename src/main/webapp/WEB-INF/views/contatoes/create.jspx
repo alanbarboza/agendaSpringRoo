@@ -6,7 +6,9 @@
         <field:textarea field="nome" id="c_br_com_ufscar_dsw_agenda_domain_Contato_nome" required="true" z="Bq9TD7Ngv1lVXBDs4rzm3fP1n+U="/>
         <field:textarea field="email" id="c_br_com_ufscar_dsw_agenda_domain_Contato_email" required="true" validationMessageCode="field_invalid_email" z="c0eKrm3nKVLT6DKYOv8If9ORvTs="/>
         <field:datetime dateTimePattern="${contato_datanascimento_date_format}" field="dataNascimento" id="c_br_com_ufscar_dsw_agenda_domain_Contato_dataNascimento" required="true" z="MtMB6hd1bByEqa3wnA+6JaWrO24="/>
-        <field:select field="telefone" id="c_br_com_ufscar_dsw_agenda_domain_Contato_telefone" itemValue="id" items="${telefones}" path="/telefones" z="s9yr1vcMkWcY8ppFcSPZo3alBQo="/>
+        <field:select field="sexo" id="c_br_com_ufscar_dsw_agenda_domain_Contato_sexo" items="${sexoes}" path="sexoes" required="true" z="ymQJj1JozL0g3m8nBz6Exbpsrq0="/>
+        <field:input field="telefone" id="c_br_com_ufscar_dsw_agenda_domain_Contato_telefone" max="10" min="8" required="true" z="sJcmcoschxwcitSi6C29CB6jalY="/>
+        <field:input field="celular" id="c_br_com_ufscar_dsw_agenda_domain_Contato_celular" max="11" min="9" required="true" z="Q/Bt0LUqkj4s5WyZfHR7hc6rgj8="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_br_com_ufscar_dsw_agenda_domain_Contato" render="${not empty dependencies}" z="T/DB20FPb6AhiLT2hiBa5N5LLxw="/>
 </div>

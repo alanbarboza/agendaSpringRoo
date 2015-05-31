@@ -16,7 +16,6 @@ import br.com.ufscar.dsw.agenda.domain.Contato;
 @RooWebScaffold(path = "contatoes", formBackingObject = Contato.class)
 @RooWebJson(jsonObject = Contato.class)
 public class ContatoController {
-
 	@RequestMapping(value = "/report/pdf", method = RequestMethod.GET)
 	public String fireReport(ModelMap modelMap) {
 		JRBeanCollectionDataSource jrDataSource = new JRBeanCollectionDataSource(
@@ -24,5 +23,4 @@ public class ContatoController {
 		modelMap.put("contatoReportList", jrDataSource);
 		return "contatoReportList";
 	}
-
 }

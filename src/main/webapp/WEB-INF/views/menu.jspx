@@ -3,14 +3,10 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
-        <menu:category id="c_telefone" z="4n22pkm4bJ2Fj/q1Sn83Sfi3kyM=">
-            <menu:item id="i_telefone_new" messageCode="global_menu_new" url="/telefones?form" z="Kc0as4oU+nrXRFairesRT3AmmO8="/>
-            <menu:item id="i_telefone_list" messageCode="global_menu_list" url="/telefones?page=1&amp;size=${empty param.size ? 10 : param.size}" z="znLjhz7XGx2QPg7AA6jPSR0cPI8="/>
-        </menu:category>
         <menu:category id="c_contato" z="+dYH4IXfg5mfp72ft5tm1d51Xq4=">
             <menu:item id="i_contato_new" messageCode="global_menu_new" url="/contatoes?form" z="N0LLxmpsQG61zKzXXA4GGPgrM6E="/>
-            <menu:item id="i_contato_export" messageCode="global_menu_export_pdf" url="/contatoes/report/pdf" />
             <menu:item id="i_contato_list" messageCode="global_menu_list" url="/contatoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="YUFN6j379uAnc60iOnpStyYI9F8="/>
+            <menu:item id="i_contato_export" messageCode="global_menu_export_pdf" url="/contatoes/report/pdf" />
         </menu:category>
         <menu:category id="c_seleniumtests" z="PPLMd2yNB6/LSbjIWogAacRPU+Q=">
             <menu:item id="si_seleniumtests_test" messageCode="selenium_menu_test_suite" url="/resources/selenium/test-suite.xhtml" z="wwunW/IPDcunN97u41MvMJZQ2to="/>

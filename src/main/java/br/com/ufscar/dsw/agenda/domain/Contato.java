@@ -8,7 +8,8 @@ import java.util.Date;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
-import javax.persistence.ManyToOne;
+import br.com.ufscar.dsw.agenda.reference.Sexo;
+import javax.persistence.Enumerated;
 import org.springframework.roo.addon.json.RooJson;
 
 @RooJavaBean
@@ -38,6 +39,19 @@ public class Contato {
 
     /**
      */
-    @ManyToOne
-    private Telefone telefone;
+    @NotNull
+    @Enumerated
+    private Sexo sexo;
+
+    /**
+     */
+    @NotNull
+    @Size(min = 8, max = 10)
+    private String telefone;
+
+    /**
+     */
+    @NotNull
+    @Size(min = 9, max = 11)
+    private String celular;
 }

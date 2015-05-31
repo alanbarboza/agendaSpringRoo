@@ -1,6 +1,6 @@
 package br.com.ufscar.dsw.agenda.reference;
 
-public enum Operadora {
+public enum Sexo {
 
-    VIVO, TIM
+    MASCULINO, FEMININO
 }
